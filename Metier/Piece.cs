@@ -1,7 +1,7 @@
 public abstract class Piece
 {
-    private int lig;
-    private int col;
+    protected int lig;
+    protected int col;
 
     public Piece (int lig, int col)
     {
