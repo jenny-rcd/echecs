@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Plateau plateau = new Plateau();
+Console.WriteLine(plateau);

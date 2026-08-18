@@ -1,5 +1,3 @@
-using System;
-
 public abstract class Piece
 {
     private int lig;
