@@ -16,4 +16,7 @@ public abstract class Piece
     }
     
     public abstract bool deplacement(); //déplacement a effectuer
+
+    public int getLig(){return this.lig;}
+    public int getCol(){return this.col;}
 }
