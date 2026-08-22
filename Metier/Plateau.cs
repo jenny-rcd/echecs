@@ -42,10 +42,10 @@ public class Plateau
 
         }
         //ajout des rois et des reines
-        this.lstPiece.Add(new King (0,3));
-        this.lstPiece.Add(new King (7,3));
-        this.lstPiece.Add(new Queen(0,4));
-        this.lstPiece.Add(new Queen(7,4));
+        this.lstPiece.Add(new King (0,4));
+        this.lstPiece.Add(new King (7,4));
+        this.lstPiece.Add(new Queen(0,3));
+        this.lstPiece.Add(new Queen(7,3));
     }
 
     public override string ToString()
@@ -55,7 +55,7 @@ public class Plateau
         int cpt = 0; // permet de voir si une piece a été mise a cette endroit
         for (int col = 0; col  < NB_COL; col++)
         {
-            res += " __";
+            res += " --";
         }
         res+= "\n";
         for (int lig = 0; lig  < NB_LIG; lig++)
