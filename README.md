@@ -9,7 +9,7 @@ Un jeu d'échecs développé en C#. Le projet est actuellement en cours de déve
 ## État du projet & Feuille de route
 
 - [x] Affichage du plateau dans le terminal (Console C#)
-- [ ] Migration vers une Interface Graphique (IHM WPF / WinForms)
+- [ ] Migration vers une Interface Graphique multiplateforme (IHM Avalonia UI)
 - [ ] Système de *Drag & Drop* pour déplacer les pièces
 - [ ] Logique et règles de déplacement de chaque pièce
 - [ ] Vérification et validation des coups légaux
@@ -22,7 +22,8 @@ Un jeu d'échecs développé en C#. Le projet est actuellement en cours de déve
 ## Technologies utilisées
 
 - **Langage** : C# (.NET)
-- **IDE** : Visual Studio / Visual Studio Code
+- **Framework Graphique** : Avalonia UI (Compatible Windows, Linux, macOS)
+- **IDE** : Visual Studio Code
 
 ---
 
