@@ -2,7 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Layout;
 
-namespace IHM;
+namespace IHM.View;
 
 public partial class MainWindow : Window
 {
