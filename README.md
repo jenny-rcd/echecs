@@ -8,13 +8,24 @@ Un jeu d'échecs développé en C#. Le projet est actuellement en cours de déve
 
 ## État du projet & Feuille de route
 
-- [x] Affichage du plateau dans le terminal (Console C#)
-- [ ] Migration vers une Interface Graphique multiplateforme (IHM Avalonia UI)
-- [ ] Système de *Drag & Drop* pour déplacer les pièces
-- [ ] Logique et règles de déplacement de chaque pièce
+### Moteur de jeu (`Metier`)
+- [x] Implémentation du plateau et des pièces d'échecs
+- [ ] Règles de déplacement (Pion, Tour, Cavalier, Fou, Reine, Roi)
 - [ ] Vérification et validation des coups légaux
-- [ ] Détection de l'échec, du mat et du pat
-- [ ] Gestion des coups spéciaux (Roque, Prise en passant, Promotion)
+- [ ] Gestion des coups spéciaux (Roque, Promotion)
+- [ ] Détection de l'échec, échec et mat, et pat
+
+### Interface Graphique (`IHM` - Avalonia UI)
+- [x] Création de la grille dynamique 
+- [x] Migration vers l'architecture MVVM
+- [ ] Affichage des visuels des pièces (`Assets`)
+- [ ] Système de *Drag & Drop* pour déplacer les pièces
+- [ ] Indicateur visuel des cases jouables
+
+### Fonctionnalités à venir
+- [ ] Compteur de temps (Timer)
+- [ ] Historique des coups joués (Notation PGN)
+- [ ] Multijoueur Local
 - [ ] Mode de jeu contre une IA
 
 ---
@@ -39,43 +50,23 @@ Le projet est structuré selon le patron de conception MVVM (Modèle-Vue-ViewMod
 
 ---
 
-## Aperçu actuel (Console)
+## Aperçu actuel
 
-Rendu du plateau sous forme de grille ASCII dans le terminal :
+Interface graphique développée sous **Avalonia UI** avec rendu dynamique du plateau d'échecs (cases couleur crème et bordeaux) :
 
-```text
- --  --  --  --  --  --  --  --
-| T | C | F | Q | K | F | C | T |
- --  --  --  --  --  --  --  --
-| P | P | P | P | P | P | P | P |
- --  --  --  --  --  --  --  --
-|   |   |   |   |   |   |   |   |
- --  --  --  --  --  --  --  --
-|   |   |   |   |   |   |   |   |
- --  --  --  --  --  --  --  --
-|   |   |   |   |   |   |   |   |
- --  --  --  --  --  --  --  --
-|   |   |   |   |   |   |   |   |
- --  --  --  --  --  --  --  --
-| P | P | P | P | P | P | P | P |
- --  --  --  --  --  --  --  --
-| T | C | F | Q | K | F | C | T |
- --  --  --  --  --  --  --  --
-```
-Légende :
-
-P : Pion | T : Tour | C : Cavalier | F : Fou | Q : Dame (Queen) | K : Roi (King)
+![Aperçu de l'interface Avalonia UI](doc/app-preview.png)
 
 ## Installation et exécution
 
 ### Prérequis
-- SDK .NET (version 6.0 ou supérieure recommandable)
+- SDK .NET (version 10.0 ou supérieure )
+- Avalonia UI *(v11+)*
 
 ### Lancement
 1. **Cloner le projet**
    ```bash
    git clone git@github.com:jenny-rcd/echecs.git
-   cd echecs
+   cd echecs/IHM
    ```
 2. **lancer le projet**
    ```bash
