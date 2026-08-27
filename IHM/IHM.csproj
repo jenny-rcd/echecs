@@ -21,6 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\metier\echecs.csproj" />
-    <AvaloniaResource Include="Assets\**" />
+    <AvaloniaResource Include="..\Assets\**" />
   </ItemGroup>
 </Project>

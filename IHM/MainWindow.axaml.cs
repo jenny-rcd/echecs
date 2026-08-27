@@ -14,7 +14,7 @@ public partial class MainWindow : Window
         {
             for (int col = 0; col < 8; col++)
             {
-                var cell = new Button
+                var cases = new Button
                 {
                     Background = (lig + col) % 2 == 0 ? Brushes.Beige : Brushes.Brown,
                     HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -22,7 +22,7 @@ public partial class MainWindow : Window
                     Tag = (lig,col),
                     Classes = { "case-echecs" }
                 };
-                ChessBoard.Children.Add(cell);
+                ChessBoard.Children.Add(cases);
             }
         }
     }
