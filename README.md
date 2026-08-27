@@ -29,11 +29,13 @@ Un jeu d'échecs développé en C#. Le projet est actuellement en cours de déve
 
 ## Architecture du projet
 
-Le projet est structuré selon le patron de conception **MVC (Modèle-Vue-Contrôleur)** pour séparer strictement la logique du jeu de son rendu visuel :
+Le projet est structuré selon le patron de conception MVVM (Modèle-Vue-ViewModel) afin d'assurer une séparation stricte entre la logique métier du jeu d'échecs et l'interface graphique :
 
-- **Modèle** : Gestion des règles, de l'état du plateau et du déplacement des pièces.
-- **Vue** : Affichage Console actuellement, conçu pour intégrer facilement une Interface Graphique (IHM) future.
-- **Contrôleur** : Traitement des actions du joueur et mise à jour de l'état du jeu.
+-Modèle (Model) : Contient la logique métier pure du jeu d'échecs (état du plateau, règles de déplacement des pièces, validation des coups et détection du pat/échec). Il est totalement indépendant de l'interface graphique.
+
+-Vue (View) : Définie en XAML via Avalonia UI, elle gère uniquement l'aspect visuel de l'échiquier et les éléments graphiques. Elle ne contient aucune logique de jeu.
+
+-ViewModel : Fait le pont entre le Modèle et la Vue. Il transforme les données de l'échiquier pour les rendre affichables par la Vue et expose les commandes (clics sur les cases, sélection d'une pièce) grâce au Data Binding.
 
 ---
 
