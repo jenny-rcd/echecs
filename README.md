@@ -18,7 +18,7 @@ Un jeu d'échecs développé en C#. Le projet est actuellement en cours de déve
 ### Interface Graphique (`IHM` - Avalonia UI)
 - [x] Création de la grille dynamique 
 - [x] Migration vers l'architecture MVVM
-- [ ] Affichage des visuels des pièces (`Assets`)
+- [x] Affichage des visuels des pièces (`Assets`)
 - [ ] Système de *Drag & Drop* pour déplacer les pièces
 - [ ] Indicateur visuel des cases jouables
 
