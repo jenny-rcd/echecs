@@ -1,14 +1,18 @@
 using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Layout;
+using echecs.IHM.ViewModels;
 
 namespace IHM.View;
+
 
 public partial class MainWindow : Window
 {
     public MainWindow()
     {
         InitializeComponent();
+
+        DataContext = new MainViewModels();
         
         for (int lig = 0; lig < 8; lig++)
         {

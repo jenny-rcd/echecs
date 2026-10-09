@@ -14,5 +14,40 @@
 
         <Grid>
             <UniformGrid x:Name="ChessBoard" Rows="8" Columns="8" />
+            <ItemsControl ItemsSource="{Binding Pieces}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid RowDefinitions="*,*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*,*">
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.Styles>
+                    <Style Selector="ItemsControl > ContentPresenter">
+                        <Setter Property="Grid.Row" Value="{Binding lig}"/>
+                        <Setter Property="Grid.Column" Value="{Binding col}"/>
+                    </Style>
+                </ItemsControl.Styles>
+
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Le conteneur de la pièce qui écoute les coordonnées C# -->
+                        <Border Grid.Row="{Binding lig}" 
+                                Grid.Column="{Binding col}"
+                                CornerRadius="5"
+                                Margin="4">
+                            
+                            <!-- L'image de la pièce à l'intérieur -->
+                            <Svg Path="{Binding CheminImage}" 
+                                Stretch="Uniform"/>
+
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl> 
+
         </Grid>
+         
 </Window>
