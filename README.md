@@ -54,7 +54,7 @@ Le projet est structuré selon le patron de conception MVVM (Modèle-Vue-ViewMod
 
 Interface graphique développée sous **Avalonia UI** avec rendu dynamique du plateau d'échecs (cases couleur crème et bordeaux) :
 
-![Aperçu de l'interface Avalonia UI](doc/app-preview.png)
+![Aperçu de l'interface Avalonia UI](doc/app_preview.png)
 
 ## Installation et exécution
 
